@@ -11,9 +11,11 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Libro::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
+        'titulo' => $faker->sentence(3,true),
+        'descripcion' => $faker->sentence(3,true),
+        'precio' => $faker->numberBetween(25,125),
+        'autor_id' => $faker->numberBetween(1,50)
     ];
 });
