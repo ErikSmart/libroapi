@@ -12,3 +12,8 @@
 */
 
 $router->get('/libro','LibroController@Index');
+$router->get('/libro/{id}','LibroController@show');
+$router->post('/libro','LibroController@store');
+$router->put('/libro/{id}','LibroController@update');
+$router->patch('/libro/{id}','LibroController@update');
+$router->delete('/libro/{id}','LibroController@destroy');
